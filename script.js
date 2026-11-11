@@ -6,6 +6,24 @@ const drawButton = document.getElementById('drawButton');
 const resultSection = document.getElementById('resultSection');
 const redrawButton = document.getElementById('redrawButton');
 
+
+
+document.getElementById('resetTitle').addEventListener('click', () => {
+  // お題の選択をリセット
+  selectedTheme = null;
+  document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
+  drawButton.disabled = true;
+
+  // 結果を隠す
+  resultSection.style.display = 'none';
+  resultSection.innerHTML = '';
+
+  // 最初の状態に戻す
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+
+
 async function loadData() {
   try {
     const response = await fetch('cards.json');
