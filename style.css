@@ -60,6 +60,7 @@ header p {
   padding: 12px 24px;
   background: transparent;
   border: none;
+  appearance: none;
   color: #5c3a42;
   cursor: pointer;
   font-size: 1rem;
@@ -82,6 +83,7 @@ header p {
   padding: 16px 32px;
   background: transparent;
   border: none;
+  appearance: none;
   color: #5c3a42;
   font-size: 1.2rem;
   font-weight: bold;
