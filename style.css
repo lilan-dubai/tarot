@@ -35,6 +35,8 @@ header p {
 }
 
 .theme-section, .draw-section, .result-section {
+  background: transparent;
+  border-radius: 0;
   padding: 24px;
   margin-bottom: 24px;
   border: none;
@@ -56,6 +58,8 @@ header p {
 
 .theme-btn {
   padding: 12px 24px;
+  background: transparent;
+  border: none;
   color: #5c3a42;
   cursor: pointer;
   font-size: 1rem;
@@ -76,6 +80,8 @@ header p {
   max-width: 300px;
   margin: 0 auto;
   padding: 16px 32px;
+  background: transparent;
+  border: none;
   color: #5c3a42;
   font-size: 1.2rem;
   font-weight: bold;
@@ -141,6 +147,8 @@ header p {
 }
 
 .interpretation {
+  background: transparent;
+  border-radius: 0;
   padding: 20px;
   margin-top: 16px;
   text-align: left;
