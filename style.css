@@ -58,8 +58,8 @@ header p {
 
 .theme-btn {
   padding: 12px 24px;
-  background: #f2d9df;
-  border: 2px solid #d4a5b0;
+  background: transparent;
+  border: none;
   color: #5c3a42;
   border-radius: 0;
   cursor: pointer;
@@ -70,8 +70,8 @@ header p {
 }
 
 .theme-btn:hover, .theme-btn.active {
-  background: #e8c4cc;
-  border-color: #c98b9a;
+  background: transparent;
+  border: none;
   color: #4a2c32;
   transform: translateY(-2px);
 }
@@ -107,15 +107,15 @@ header p {
 }
 
 .draw-btn.secondary {
-  background: #f2d9df;
+  background: transparent;
   color: #5c3a42;
-  border: 2px solid #d4a5b0;
+  border: none;
   margin-top: 20px;
   box-shadow: none;
 }
 
 .draw-btn.secondary:hover {
-  background: #e8c4cc;
+  background: transparent;
 }
 
 .result-section {
@@ -194,6 +194,13 @@ header p {
 .draw-btn:not(.secondary)::after {
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 4' preserveAspectRatio='none'%3E%3Cpath d='M0,2 C10,0 20,4 30,2 S50,0 60,2 S80,4 100,2' stroke='%23ffffff' stroke-width='1.5' fill='none'/%3E%3C/svg%3E") no-repeat center;
   background-size: 100% 100%;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 1.1rem;
+  color: #8a5a64;
 }
 
 @media (max-width: 600px) {
