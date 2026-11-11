@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>タロット占い - 大アルカナ1枚引き</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🌙 タロット占い</h1>
+      <p>大アルカナから1枚引いてみましょう</p>
+    </header>
+
+    <section class="theme-section">
+      <h2>お題を選んでください</h2>
+      <div class="theme-buttons" id="themeButtons">
+        <!-- JSで生成 -->
+      </div>
+    </section>
+
+    <section class="draw-section">
+      <button id="drawButton" class="draw-btn" disabled>カードを引く</button>
+    </section>
+
+    <section class="result-section" id="resultSection" style="display: none;">
+      <div class="card-container">
+        <img id="cardImage" src="" alt="タロットカード" class="card-image">
+        <div id="positionBadge" class="position-badge"></div>
+      </div>
+      <div class="card-info">
+        <h2 id="cardName"></h2>
+        <p id="cardNameEn" class="card-en"></p>
+        <div class="interpretation">
+          <h3 id="themeLabel"></h3>
+          <p id="interpretationText"></p>
+        </div>
+      </div>
+      <button id="redrawButton" class="draw-btn secondary">もう一度引く</button>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
