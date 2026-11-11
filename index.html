@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
 
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,16 +12,25 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-  
 <body>
   <div class="container">
-<header>
-  <h1 id="resetTitle" style="cursor: pointer;">おとなのタロット占い</h1>
-  <div style="height:50px; display: block;"></div>
-    <h2>おとなだから悩むのよ、あなたの答えに一歩近づくために</h2>
-    <h2>1枚引いてみましょう</h2>
-</header>
-    <section class="theme-section">
+    <header>
+      <h1 id="resetTitle" style="cursor: pointer;">おとなのタロット占い</h1>
+      <div style="height:50px; display: block;"></div>
+      <h2>おとなだから悩むのよ、あなたの答えに一歩近づくために</h2>
+      <h2>1枚引いてみましょう</h2>
+    </header>
+
+    <!-- モード選択 -->
+    <section class="mode-section">
+      <h2>占いの種類を選んでください</h2>
+      <div class="mode-buttons">
+        <button id="normalModeBtn" class="theme-btn active">通常のタロット</button>
+        <button id="yesnoModeBtn" class="theme-btn">Yes / No</button>
+      </div>
+    </section>
+
+    <section class="theme-section" id="themeSection">
       <h2>お題を選んでください</h2>
       <div class="theme-buttons" id="themeButtons">
         <!-- JSで生成 -->
@@ -46,7 +54,7 @@
           <p id="interpretationText"></p>
         </div>
       </div>
-      <button id="redrawButton" class="draw-btn secondary">もう一度引く</button>
+      <button id="redrawButton" class="draw-btn secondary">最初に戻る</button>
     </section>
   </div>
 
