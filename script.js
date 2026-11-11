@@ -34,7 +34,7 @@ function createThemeButtons() {
 
 function selectTheme(themeKey, button) {
   selectedTheme = themeKey;
-  document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('#themeButtons .theme-btn').forEach(b => b.classList.remove('active'));
   button.classList.add('active');
   drawButton.disabled = false;
 }
@@ -51,7 +51,7 @@ function setMode(yesno) {
   } else {
     themeSection.style.display = 'block';
     selectedTheme = null;
-    document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('#themeButtons .theme-btn').forEach(b => b.classList.remove('active'));
     drawButton.disabled = true;
   }
 }
@@ -63,9 +63,8 @@ function resetToInitial() {
   drawButton.disabled = true;
   resultSection.style.display = 'none';
   resultSection.innerHTML = '';
-  themeSection.style.display = 'block';
+  themeSection.style.display = 'none';
   drawSection.style.display = 'block';
-  setMode(false);
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
