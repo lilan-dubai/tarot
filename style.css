@@ -56,15 +56,6 @@ header p {
   justify-content: center;
 }
 
-.theme-btn,
-.draw-btn {
-  background: transparent !important;
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-}
-
 .theme-btn {
   padding: 12px 24px;
   color: #5c3a42;
