@@ -5,6 +5,8 @@ const themeButtonsContainer = document.getElementById('themeButtons');
 const drawButton = document.getElementById('drawButton');
 const resultSection = document.getElementById('resultSection');
 const resetTitle = document.getElementById('resetTitle');
+const themeSection = document.querySelector('.theme-section');
+const drawSection = document.querySelector('.draw-section');
 
 async function loadData() {
   try {
@@ -41,12 +43,16 @@ function resetToInitial() {
   drawButton.disabled = true;
   resultSection.style.display = 'none';
   resultSection.innerHTML = '';
+  themeSection.style.display = 'block';
+  drawSection.style.display = 'block';
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function drawCard() {
   if (!selectedTheme) return;
 
+  themeSection.style.display = 'none';
+  drawSection.style.display = 'none';
   resultSection.style.display = 'block';
   resultSection.innerHTML = '<div class="loading">カードを読んでいます...</div>';
 
