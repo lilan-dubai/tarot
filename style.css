@@ -56,10 +56,16 @@ header p {
   justify-content: center;
 }
 
+.theme-btn,
+.draw-btn {
+  border: none !important;
+  outline: none;
+  box-shadow: none;
+}
+
 .theme-btn {
   padding: 12px 24px;
   background: transparent;
-  border: none;
   color: #5c3a42;
   border-radius: 0;
   cursor: pointer;
@@ -69,9 +75,9 @@ header p {
   position: relative;
 }
 
-.theme-btn:hover, .theme-btn.active {
+.theme-btn:hover,
+.theme-btn.active {
   background: transparent;
-  border: none;
   color: #4a2c32;
   transform: translateY(-2px);
 }
@@ -84,21 +90,18 @@ header p {
   padding: 16px 32px;
   background: #c98b9a;
   color: #fff;
-  border: none;
   border-radius: 0;
   font-size: 1.2rem;
   font-weight: bold;
   font-family: 'Kiwi Maru', serif;
   cursor: pointer;
   transition: all 0.3s;
-  box-shadow: 0 4px 12px rgba(201, 139, 154, 0.3);
   position: relative;
 }
 
 .draw-btn:hover:not(:disabled) {
   background: #b87a89;
   transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(201, 139, 154, 0.4);
 }
 
 .draw-btn:disabled {
@@ -109,9 +112,7 @@ header p {
 .draw-btn.secondary {
   background: transparent;
   color: #5c3a42;
-  border: none;
   margin-top: 20px;
-  box-shadow: none;
 }
 
 .draw-btn.secondary:hover {
@@ -179,7 +180,8 @@ header p {
   color: #5c3a42;
 }
 
-.theme-btn::after, .draw-btn::after {
+.theme-btn::after,
+.draw-btn::after {
   content: "";
   position: absolute;
   left: 10%;
