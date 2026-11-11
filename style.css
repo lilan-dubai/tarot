@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Zen Old Mincho', serif;
+  font-family: 'Kiwi Maru', serif;
   background: #f2d9df;
   color: #5c3a42;
   min-height: 100vh;
@@ -64,7 +64,7 @@ header p {
   border-radius: 0;
   cursor: pointer;
   font-size: 1rem;
-  font-family: 'Zen Old Mincho', serif;
+  font-family: 'Kiwi Maru', serif;
   transition: all 0.3s;
   position: relative;
 }
@@ -88,7 +88,7 @@ header p {
   border-radius: 0;
   font-size: 1.2rem;
   font-weight: bold;
-  font-family: 'Zen Old Mincho', serif;
+  font-family: 'Kiwi Maru', serif;
   cursor: pointer;
   transition: all 0.3s;
   box-shadow: 0 4px 12px rgba(201, 139, 154, 0.3);
