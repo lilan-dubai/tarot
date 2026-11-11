@@ -40,6 +40,12 @@ header h2 {
   margin-bottom: 40px;
 }
 
+.mode-section h2 {
+  text-align: center;
+  margin-bottom: 16px;
+  color: #8a5a64;
+}
+
 .mode-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -56,7 +62,7 @@ header h2 {
   box-shadow: none;
 }
 
-.theme-section h2, .card-info h2, .mode-section h2 {
+.theme-section h2, .card-info h2 {
   margin-bottom: 16px;
   text-align: center;
   color: #8a5a64;
