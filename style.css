@@ -35,8 +35,6 @@ header p {
 }
 
 .theme-section, .draw-section, .result-section {
-  background: transparent;
-  border-radius: 0;
   padding: 24px;
   margin-bottom: 24px;
   border: none;
@@ -143,8 +141,6 @@ header p {
 }
 
 .interpretation {
-  background: transparent;
-  border-radius: 0;
   padding: 20px;
   margin-top: 16px;
   text-align: left;
