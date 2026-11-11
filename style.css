@@ -58,16 +58,16 @@ header p {
 
 .theme-btn,
 .draw-btn {
+  background: transparent !important;
   border: none !important;
-  outline: none;
-  box-shadow: none;
+  outline: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
 }
 
 .theme-btn {
   padding: 12px 24px;
-  background: transparent;
   color: #5c3a42;
-  border-radius: 0;
   cursor: pointer;
   font-size: 1rem;
   font-family: 'Kiwi Maru', serif;
@@ -77,7 +77,6 @@ header p {
 
 .theme-btn:hover,
 .theme-btn.active {
-  background: transparent;
   color: #4a2c32;
   transform: translateY(-2px);
 }
@@ -88,9 +87,7 @@ header p {
   max-width: 300px;
   margin: 0 auto;
   padding: 16px 32px;
-  background: #c98b9a;
-  color: #fff;
-  border-radius: 0;
+  color: #5c3a42;
   font-size: 1.2rem;
   font-weight: bold;
   font-family: 'Kiwi Maru', serif;
@@ -100,7 +97,7 @@ header p {
 }
 
 .draw-btn:hover:not(:disabled) {
-  background: #b87a89;
+  color: #4a2c32;
   transform: translateY(-3px);
 }
 
@@ -110,13 +107,7 @@ header p {
 }
 
 .draw-btn.secondary {
-  background: transparent;
-  color: #5c3a42;
   margin-top: 20px;
-}
-
-.draw-btn.secondary:hover {
-  background: transparent;
 }
 
 .result-section {
@@ -191,11 +182,6 @@ header p {
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 4' preserveAspectRatio='none'%3E%3Cpath d='M0,2 C10,0 20,4 30,2 S50,0 60,2 S80,4 100,2' stroke='%235c3a42' stroke-width='1.5' fill='none'/%3E%3C/svg%3E") no-repeat center;
   background-size: 100% 100%;
   pointer-events: none;
-}
-
-.draw-btn:not(.secondary)::after {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 4' preserveAspectRatio='none'%3E%3Cpath d='M0,2 C10,0 20,4 30,2 S50,0 60,2 S80,4 100,2' stroke='%23ffffff' stroke-width='1.5' fill='none'/%3E%3C/svg%3E") no-repeat center;
-  background-size: 100% 100%;
 }
 
 .loading {
