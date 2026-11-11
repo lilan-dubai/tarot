@@ -68,10 +68,10 @@ function drawCard() {
           <p id="interpretationText">${card.interpretations[selectedTheme][isReversed ? 'reversed' : 'upright']}</p>
         </div>
       </div>
-      <button id="redrawButton" class="draw-btn secondary">もう一度引く</button>
+      <button id="redrawButton" class="draw-btn secondary">最初に戻る</button>
     `;
 
-    document.getElementById('redrawButton').addEventListener('click', drawCard);
+    document.getElementById('redrawButton').addEventListener('click', resetToInitial);
   }, 2000);
 }
 
