@@ -11,6 +11,7 @@ const drawSection = document.querySelector('.draw-section');
 const modeSection = document.querySelector('.mode-section');
 const normalModeBtn = document.getElementById('normalModeBtn');
 const yesnoModeBtn = document.getElementById('yesnoModeBtn');
+const cardBackContainer = document.getElementById('cardBackContainer');
 
 async function loadData() {
   try {
@@ -107,6 +108,13 @@ function drawCard() {
 }
 
 if (drawButton) drawButton.addEventListener('click', drawCard);
+if (cardBackContainer) {
+  cardBackContainer.addEventListener('click', () => {
+    if (!drawButton.disabled) {
+      drawCard();
+    }
+  });
+}
 if (resetTitle) resetTitle.addEventListener('click', resetToInitial);
 if (normalModeBtn) normalModeBtn.addEventListener('click', () => setMode(false));
 if (yesnoModeBtn) yesnoModeBtn.addEventListener('click', () => setMode(true));
