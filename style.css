@@ -228,3 +228,13 @@ footer {
     max-width: 220px;
   }
 }
+
+.theme-section, .draw-section, .result-section {
+  background: transparent;
+  border-radius: 0;
+  padding: 24px;
+  margin-bottom: 24px;
+  border: none;
+  box-shadow: none;
+  text-align: center;
+}
