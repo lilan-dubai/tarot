@@ -8,6 +8,7 @@ const resultSection = document.getElementById('resultSection');
 const resetTitle = document.getElementById('resetTitle');
 const themeSection = document.getElementById('themeSection');
 const drawSection = document.querySelector('.draw-section');
+const modeSection = document.querySelector('.mode-section');
 const normalModeBtn = document.getElementById('normalModeBtn');
 const yesnoModeBtn = document.getElementById('yesnoModeBtn');
 
@@ -65,12 +66,14 @@ function resetToInitial() {
   resultSection.innerHTML = '';
   themeSection.style.display = 'none';
   drawSection.style.display = 'block';
+  if (modeSection) modeSection.style.display = 'block';
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function drawCard() {
   if (!selectedTheme && !isYesNoMode) return;
 
+  if (modeSection) modeSection.style.display = 'none';
   if (themeSection) themeSection.style.display = 'none';
   if (drawSection) drawSection.style.display = 'none';
   resultSection.style.display = 'block';
