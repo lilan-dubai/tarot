@@ -12,6 +12,17 @@ body {
   padding: 20px;
 }
 
+h1, h2, h3, h4, h5 {
+  font-family: 'Zen Old Mincho', serif;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #8a5a64;
+  text-shadow: none;
+}
+
 .container {
   max-width: 800px;
   margin: 0 auto;
