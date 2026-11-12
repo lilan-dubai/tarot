@@ -21,27 +21,19 @@
       <h2>まずは1枚引いてみましょう</h2>
     </header>
 
-    <section class="mode-section">
-      <h2>占いの種類を選んでください</h2>
-      <div class="mode-buttons">
-        <button id="normalModeBtn" class="theme-btn">通常のタロット</button>
-        <button id="yesnoModeBtn" class="theme-btn">Yes / No</button>
-      </div>
-    </section>
-
-    <section class="theme-section" id="themeSection" style="display: none;">
+    <section class="theme-section" id="themeSection">
       <h2>お題を選んでください</h2>
       <div class="theme-buttons" id="themeButtons">
         <!-- JSで生成 -->
       </div>
     </section>
 
-<section class="draw-section">
-  <div class="card-container" id="cardBackContainer" style="margin-bottom: 24px; cursor: pointer;">
-    <img src="images/card_back.jpg" alt="カードの裏面" class="card-image">
-  </div>
-  <button id="drawButton" class="draw-btn" disabled>カードを引く</button>
-</section>
+    <section class="draw-section">
+      <div class="card-container" id="cardBackContainer" style="margin-bottom: 24px; cursor: pointer;">
+        <img src="images/card_back.jpg" alt="カードの裏面" class="card-image">
+      </div>
+      <button id="drawButton" class="draw-btn" disabled>カードを引く</button>
+    </section>
 
     <section class="result-section" id="resultSection" style="display: none;">
       <div class="card-container">
@@ -60,12 +52,10 @@
     </section>
   </div>
 
-
   <footer style="text-align: center; margin-top: 60px; font-size: 0.9rem; color: #a07882;">
-  <a href="privacy.html">プライバシーポリシー</a> ｜ <a href="terms.html">利用規約</a>
-</footer>
+    <a href="privacy.html">プライバシーポリシー</a> ｜ <a href="terms.html">利用規約</a>
+  </footer>
 
-  
   <script src="script.js"></script>
 </body>
 </html>
