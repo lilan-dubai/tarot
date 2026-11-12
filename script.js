@@ -8,9 +8,6 @@ const resultSection = document.getElementById('resultSection');
 const resetTitle = document.getElementById('resetTitle');
 const themeSection = document.getElementById('themeSection');
 const drawSection = document.querySelector('.draw-section');
-const modeSection = document.querySelector('.mode-section');
-const normalModeBtn = document.getElementById('normalModeBtn');
-const yesnoModeBtn = document.getElementById('yesnoModeBtn');
 const cardBackContainer = document.getElementById('cardBackContainer');
 
 async function loadData() {
@@ -32,30 +29,21 @@ function createThemeButtons() {
     btn.addEventListener('click', () => selectTheme(key, btn));
     themeButtonsContainer.appendChild(btn);
   });
+
+  const yesnoBtn = document.createElement('button');
+  yesnoBtn.className = 'theme-btn';
+  yesnoBtn.textContent = 'Yes / No';
+  yesnoBtn.dataset.theme = 'yesno';
+  yesnoBtn.addEventListener('click', () => selectTheme('yesno', yesnoBtn));
+  themeButtonsContainer.appendChild(yesnoBtn);
 }
 
 function selectTheme(themeKey, button) {
   selectedTheme = themeKey;
+  isYesNoMode = (themeKey === 'yesno');
   document.querySelectorAll('#themeButtons .theme-btn').forEach(b => b.classList.remove('active'));
   button.classList.add('active');
   drawButton.disabled = false;
-}
-
-function setMode(yesno) {
-  isYesNoMode = yesno;
-  normalModeBtn.classList.toggle('active', !yesno);
-  yesnoModeBtn.classList.toggle('active', yesno);
-
-  if (yesno) {
-    themeSection.style.display = 'none';
-    selectedTheme = 'yesno';
-    drawButton.disabled = false;
-  } else {
-    themeSection.style.display = 'block';
-    selectedTheme = null;
-    document.querySelectorAll('#themeButtons .theme-btn').forEach(b => b.classList.remove('active'));
-    drawButton.disabled = true;
-  }
 }
 
 function resetToInitial() {
@@ -65,16 +53,14 @@ function resetToInitial() {
   drawButton.disabled = true;
   resultSection.style.display = 'none';
   resultSection.innerHTML = '';
-  themeSection.style.display = 'none';
+  themeSection.style.display = 'block';
   drawSection.style.display = 'block';
-  if (modeSection) modeSection.style.display = 'block';
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function drawCard() {
-  if (!selectedTheme && !isYesNoMode) return;
+  if (!selectedTheme) return;
 
-  if (modeSection) modeSection.style.display = 'none';
   if (themeSection) themeSection.style.display = 'none';
   if (drawSection) drawSection.style.display = 'none';
   resultSection.style.display = 'block';
@@ -116,7 +102,5 @@ if (cardBackContainer) {
   });
 }
 if (resetTitle) resetTitle.addEventListener('click', resetToInitial);
-if (normalModeBtn) normalModeBtn.addEventListener('click', () => setMode(false));
-if (yesnoModeBtn) yesnoModeBtn.addEventListener('click', () => setMode(true));
 
 loadData();
