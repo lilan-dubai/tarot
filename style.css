@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Kiwi Maru', serif;
+  font-family: sans-serif;
   background: #f2d9df;
   color: #5c3a42;
   min-height: 100vh;
@@ -23,6 +23,7 @@ header {
 }
 
 header h1 {
+  font-family: 'Kiwi Maru', serif;
   font-size: 2.5rem;
   margin-bottom: 10px;
   color: #8a5a64;
@@ -83,7 +84,7 @@ header h2 {
   color: #5c3a42;
   cursor: pointer;
   font-size: 1rem;
-  font-family: 'Kiwi Maru', serif;
+  font-family: sans-serif;
   transition: all 0.3s;
   position: relative;
 }
@@ -106,7 +107,7 @@ header h2 {
   color: #5c3a42;
   font-size: 1.2rem;
   font-weight: bold;
-  font-family: 'Kiwi Maru', serif;
+  font-family: sans-serif;
   cursor: pointer;
   transition: all 0.3s;
   position: relative;
@@ -209,6 +210,14 @@ header h2 {
   padding: 40px 20px;
   font-size: 1.1rem;
   color: #8a5a64;
+}
+
+footer {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 0.9rem;
+  color: #a07882;
+  font-family: sans-serif;
 }
 
 @media (max-width: 600px) {
